@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Harjender Singh — Game Designer | Living Worlds</title>
+<meta name="description" content="Harjender Singh, Game Designer specializing in open-world life experience games. Designing worlds where players don't just play — they live.">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Harjender Singh — Game Designer">
+<meta property="og:description" content="Designing Living Worlds Where Players Don't Just Play... They Experience Life.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div id="preloader" aria-hidden="true">
+  <div class="preloader__bg-particles" id="preloaderParticles"></div>
+  <div class="preloader__inner">
+    <div class="preloader__ring-wrap">
+      <svg class="preloader__ring" viewBox="0 0 140 140">
+        <circle cx="70" cy="70" r="60" class="ring-track"/>
+        <circle cx="70" cy="70" r="60" class="ring-fill" id="ringFill"/>
+        <circle cx="70" cy="70" r="60" class="ring-glow"/>
+      </svg>
+      <div class="preloader__dots">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="preloader__mark">HS</div>
+    <div class="preloader__name">HARJENDER SINGH</div>
+    <div class="preloader__role">Game Designer</div>
+    <div class="preloader__bottom">
+      <div class="preloader__bar">
+        <div class="preloader__bar-fill" id="preloaderBar"></div>
+      </div>
+      <div class="preloader__info">
+        <span class="preloader__caption">LOADING PORTFOLIO</span>
+        <span class="preloader__label"><span id="preloader-pct">0</span>%</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CUSTOM CURSOR / SIGNATURE COMPASS RETICLE ============ -->
+<div class="reticle" id="reticle" aria-hidden="true">
+  <svg viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" class="reticle__ring-outer"/>
+    <circle cx="32" cy="32" r="18" class="reticle__ring-inner"/>
+    <line x1="32" y1="2" x2="32" y2="10" class="reticle__tick"/>
+    <line x1="32" y1="54" x2="32" y2="62" class="reticle__tick"/>
+    <line x1="2" y1="32" x2="10" y2="32" class="reticle__tick"/>
+    <line x1="54" y1="32" x2="62" y2="32" class="reticle__tick"/>
+    <circle cx="32" cy="32" r="1.6" class="reticle__dot"/>
+  </svg>
+</div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- Scroll progress worn as the compass needle -->
+<div class="scroll-compass" id="scrollCompass" aria-hidden="true">
+  <svg viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="44" class="compass-track"/>
+    <circle cx="50" cy="50" r="44" class="compass-progress" id="compassProgress"/>
+  </svg>
+  <span class="scroll-compass__n">N</span>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="site-nav" id="siteNav">
+  <a href="#hero" class="site-nav__brand">
+    <span class="brand-mark">HS</span>
+    <span class="brand-name">Harjender&nbsp;Singh</span>
+  </a>
+  <nav class="site-nav__links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#timeline">Roadmap</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="mailto:world02shop@gmail.com" class="site-nav__cta">Start a Conversation</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero__vignette"></div>
+  <div class="hero__fog"></div>
+
+  <div class="hero__content">
+    <p class="hero__eyebrow" data-reveal>OPEN WORLD LIFE EXPERIENCE DESIGN</p>
+    <h1 class="hero__title">
+      <span class="hero__title-line" data-reveal-line>HARJENDER</span>
+      <span class="hero__title-line hero__title-line--accent" data-reveal-line>SINGH</span>
+    </h1>
+    <p class="hero__role" data-reveal>Game&nbsp;Designer</p>
+    <p class="hero__tagline" data-reveal>
+      Designing living worlds where players don't just play<span class="dots">…</span>
+      <br class="only-desktop"> they <em>experience life.</em>
+    </p>
+
+    <div class="hero__cta" data-reveal>
+      <a href="#projects" class="btn btn--primary">
+        <span>Enter The Worlds</span>
+        <svg viewBox="0 0 24 24" class="btn__arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#contact" class="btn btn--ghost">
+        <span>Request Resume</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero__coords" aria-hidden="true">
+    <span id="coordX">X 000.00</span>
+    <span id="coordY">Y 000.00</span>
+    <span>WORLD-01</span>
+  </div>
+</section>
+
+<main>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="section-head" data-reveal>
+    <span class="section-head__eyebrow">World / About</span>
+    <h2 class="section-head__title">The Designer Behind The <span class="text-gold">Worlds</span></h2>
+  </div>
+
+  <div class="about__grid">
+    <div class="about__card-wrap" data-reveal>
+      <div class="about__card" id="aboutCard">
+        <div class="about__card-glow"></div>
+        <div class="about__card-inner">
+          <div class="about__photo-wrap">
+            <img src="photo.jpg.jpeg" alt="Harjender Singh" class="about__photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="about__photo-fallback" style="display:none">
+              <span>HS</span>
+            </div>
+          </div>
+          <h3>Harjender Singh</h3>
+          <p class="about__card-role">Game Designer</p>
+          <div class="about__card-divider"></div>
+          <ul class="about__card-meta">
+            <li><span>Focus</span>Game Design Documentation</li>
+            <li><span>Speciality</span>Open World Life Experience</li>
+            <li><span>Strength</span>Concept &amp; Vision Building</li>
+          </ul>
+          <a href="mailto:world02shop@gmail.com" class="about__card-email">world02shop@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="about__text">
+      <p data-reveal>I have been passionate about game design since childhood. My dream is to create revolutionary open-world life experience games that players remember for years.</p>
+      <p data-reveal>Instead of simply designing gameplay, I design <span class="text-gold">emotions, worlds, systems, progression, player psychology, exploration</span>, and meaningful experiences.</p>
+      <p data-reveal>One of my greatest strengths is transforming raw ideas into complete Game Design Documents — clear blueprints that communicate gameplay systems, mechanics, progression, and player journeys to a full studio team.</p>
+      <p class="about__quote" data-reveal>"I believe games should let players live another life."</p>
+    </div>
+  </div>
+
+  <!-- Philosophy -->
+  <div class="philosophy" data-reveal>
+    <div class="philosophy__row">
+      <p class="philosophy__no">Games should not only entertain.</p>
+      <p class="philosophy__no">Games should not only entertain.</p>
+    </div>
+    <h3 class="philosophy__yes">They should create <span>memories.</span> They should create <span>emotions.</span> They should create <span>experiences.</span></h3>
+    <div class="philosophy__lines">
+      <p>Every mechanic exists because it creates a feeling.</p>
+      <p>Every world tells stories without words.</p>
+      <p>Every player finishes the game feeling changed.</p>
+    </div>
+  </div>
+
+  <!-- Core Strengths -->
+  <div class="strengths" id="strengths">
+    <h3 class="strengths__title" data-reveal>Core Strengths</h3>
+    <div class="strengths__grid" id="strengthsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="projects" id="projects">
+  <div class="section-head" data-reveal>
+    <span class="section-head__eyebrow">Cases / Featured Worlds</span>
+    <h2 class="section-head__title">Select A <span class="text-gold">World</span> To Enter</h2>
+    <p class="section-head__sub">Five original concepts. Each a complete design case — story, systems, loop, and roadmap.</p>
+  </div>
+
+  <div class="launcher" id="launcher"></div>
+
+  <!-- Detail Overlay -->
+  <div class="project-detail" id="projectDetail" aria-hidden="true">
+    <div class="project-detail__backdrop" id="detailBackdrop"></div>
+    <div class="project-detail__panel">
+      <button class="project-detail__close" id="detailClose" aria-label="Close">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="project-detail__scroll" id="detailScroll"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="skills" id="skills">
+  <div class="section-head" data-reveal>
+    <span class="section-head__eyebrow">Systems / Skill Network</span>
+    <h2 class="section-head__title">My <span class="text-gold">Design</span> Toolkit</h2>
+    <p class="section-head__sub">Every skill here serves one goal — designing games that players remember.</p>
+  </div>
+  <div class="skills-grid" id="skillsGrid"></div>
+</section>
+
+<!-- ============ TIMELINE / ROADMAP ============ -->
+<section class="timeline" id="timeline">
+  <div class="section-head" data-reveal>
+    <span class="section-head__eyebrow">Path / Vision</span>
+    <h2 class="section-head__title">Career <span class="text-gold">Roadmap</span></h2>
+    <p class="section-head__sub">Not a résumé. A development plan for the studio I intend to build inside.</p>
+  </div>
+  <div class="timeline__track" id="timelineTrack"></div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <canvas id="contact-canvas"></canvas>
+  <div class="contact__inner">
+    <div class="section-head section-head--center" data-reveal>
+      <span class="section-head__eyebrow">Signal / Contact</span>
+      <h2 class="section-head__title">Let's Build A <span class="text-gold">World</span> Together</h2>
+      <p class="section-head__sub">Open to Game Designer &amp; Creative Direction roles, collaborations, and studio conversations.</p>
+    </div>
+
+    <div class="contact__grid">
+      <div class="contact__panel glass" data-reveal>
+        <form id="contactForm" class="contact__form" novalidate>
+          <div class="field">
+            <input type="text" id="cf-name" name="name" required placeholder=" ">
+            <label for="cf-name">Your Name</label>
+          </div>
+          <div class="field">
+            <input type="email" id="cf-email" name="email" required placeholder=" ">
+            <label for="cf-email">Your Email</label>
+          </div>
+          <div class="field">
+            <input type="text" id="cf-subject" name="subject" placeholder=" ">
+            <label for="cf-subject">Studio / Subject</label>
+          </div>
+          <div class="field">
+            <textarea id="cf-message" name="message" rows="4" required placeholder=" "></textarea>
+            <label for="cf-message">Message</label>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">
+            <span id="cfSubmitLabel">Send Transmission</span>
+            <svg viewBox="0 0 24 24" class="btn__arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <p class="contact__form-note" id="cfNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="contact__side" data-reveal>
+        <a href="mailto:world02shop@gmail.com" class="contact__link">
+          <span class="contact__link-label">Email</span>
+          <span class="contact__link-value">world02shop@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/harjendersinghgame" target="_blank" rel="noopener" class="contact__link">
+          <span class="contact__link-label">LinkedIn</span>
+          <span class="contact__link-value">in/harjendersinghgame</span>
+        </a>
+        <div class="contact__status">
+          <span class="status-dot"></span>
+          Currently available for Game Designer roles
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span>&copy; <span id="year"></span> Harjender Singh — Game Designer</span>
+    <span class="site-footer__tag">Designed &amp; built as a living world, not a page.</span>
+  </div>
+</footer>
+
+<!-- Skip-to-content live region for a11y -->
+<div id="a11y-announcer" class="sr-only" aria-live="polite"></div>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="data.js"></script>
+<script src="js/threeScene.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
