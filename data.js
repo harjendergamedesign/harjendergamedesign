@@ -246,6 +246,53 @@ const PROJECTS = [
       { phase: "Public Beta", detail: "Browser launch, feedback loop", pct: 5 },
       { phase: "Classroom & API", detail: "Education tools, embeddable widget", pct: 0 }
     ]
+  },
+  {
+    id: "masti-khor",
+    index: "06",
+    codename: "WORLD-06",
+    title: "MASTI KHOR",
+    subtitle: "Comedy Adventure in the Indian Mohalla",
+    genre: "Top-Down 2D Comedy Adventure",
+    status: "Concept / Design Document",
+    tags: ["Comedy", "Stealth", "Indian Culture", "Chase", "Puzzle"],
+    heroNote: "Masti toh honi hi hai — sawaal hai kitni!",
+    story: "In the heart of a bustling Indian mohalla lives Kabir, a 12-year-old boy known for his endless mischief. One fateful day, his pranks go too far, and he must face the consequences — being chased by 5 unique enemies across the neighborhood. From a mad dog to a vengeful ghost, Kabir must use his wits, stealth, and the help of friendly NPCs to survive each level and ultimately earn forgiveness.",
+    gameplayVision: "Comedy-driven gameplay where every chase has a humorous twist. The game celebrates Indian culture through authentic mohalla settings, colorful characters, and dialogue that makes you smile.",
+    loop: "Explore the mohalla → Find safe paths → Solve puzzles → Avoid unique enemies → Help NPCs → Reach the goal → Complete the level.",
+    motivation: "Players stay for the humor, the charming Indian setting, and the satisfaction of outsmarting each uniquely designed enemy.",
+    mechanics: [
+      "5 unique enemy AI types — Dog, Monkey, Bees, Bull, Ghost — each with distinct chase behavior",
+      "Stealth system with hiding spots, visibility meter, and noise detection",
+      "Environmental puzzles using mohalla objects — crates, stalls, lanterns, ropes",
+      "NPC dialogue system with humor-driven interactions and hints",
+      "Stamina and health system for strategic gameplay"
+    ],
+    usp: [
+      "Authentic Indian mohalla setting — no other game has this cultural backdrop",
+      "5 distinct chase-based levels with unique enemy AI per level",
+      "Comedy-first design where humor drives the gameplay, not just the dialogue"
+    ],
+    systems: [
+      "Enemy AI state machine — Idle, Patrol, Alert, Chase, Confused, Return",
+      "Detection system with sight cones, hearing range, and scent trails",
+      "Inventory system with level-specific items and power-ups",
+      "Dialogue system with character portraits and multiple choice responses"
+    ],
+    progression: "Each level introduces new mechanics — from basic hiding in Level 1 to riddle puzzles and lantern mechanics in Level 5. Mastery grows with each escape.",
+    exploration: "The mohalla is dense with hidden alleys, interactive objects, and NPC side quests that reward curious players with items and humorous dialogue.",
+    future: [
+      "Multiplayer chase mode — one player as Kabir, others as enemies",
+      "Level editor for community-created mohalla levels",
+      "Festival-themed seasonal content (Diwali, Holi, Navratri)"
+    ],
+    roadmap: [
+      { phase: "Pre-Production", detail: "GDD finalization, art style testing, Godot 4.7 setup", pct: 100 },
+      { phase: "Prototype", detail: "Core movement, stealth, and Dog AI (Level 1)", pct: 40 },
+      { phase: "Vertical Slice", detail: "Level 1 complete with all mechanics", pct: 15 },
+      { phase: "Production", detail: "All 5 levels, full enemy AI, puzzles, NPC dialogue", pct: 0 },
+      { phase: "Polish & Release", detail: "Audio, UI polish, PC/Web launch", pct: 0 }
+    ]
   }
 ];
 
